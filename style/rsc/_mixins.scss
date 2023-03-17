@@ -1,0 +1,23 @@
+// Claculate fluid Font Algorithm:
+// mathematical ecuation of a line:
+// y2-y1 = m(x2-x1)
+
+@function fluid_size ($x1, $x2, $y1, $y2){
+   $deltay : calc($y2 - $y1);
+   $deltax : calc($x2 - $x1);
+   $m : calc($deltay / $deltax);
+   $f-size: calc($m * (100vw - $x1) + $y1);
+   @return $f-size;
+}
+
+@mixin font_style ($f-family, $weight){
+    font-family: $f-family;
+    font-weight: $weight;    
+}
+@mixin fluid_text($min-vw, $max-vw, $min-f, $max-f, $f-family, $weight){
+    @include font_style($f-family, $weight);
+    font-size: clamp($min-f, fluid_size($min-vw, $max-vw, $min-f, $max-f), $max-f);
+}
+@mixin fluid_l-height($min-vw, $max-vw, $min-lh, $max-lh){
+    line-height: clamp($min-lh, fluid_size($min-vw, $max-vw, $min-lh, $max-lh), $max-lh);
+}

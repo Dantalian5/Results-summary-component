@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+ $f-family:'Hanken Grotesk', sans-serif;
+// Colors:
+//   Primary
+    $c_p_Light-red: hsl(0, 100%, 67%);
+    $c_p_Orangey-yellow: hsl(39, 100%, 56%);
+    $c_p_Green-teal: hsl(166, 100%, 37%);
+    $c_p_Cobalt-blue: hsl(234, 85%, 45%);
+//  Neutral
+    $c_n_White: hsl(0, 0%, 100%);
+    $c_n_Pale-blue: hsl(221, 100%, 96%);
+    $c_n_Light-lavender: hsl(241, 100%, 89%);
+    $c_n_Dark-gray-blue: hsl(224, 30%, 27%); 
+//  Gradients
+    $c_g_bkg-top: hsla(251, 100%, 63%, 1);
+    $c_g_bkg-bottom: hsla(243, 82%, 54%, 1);
+    $c_g_circle-top: hsla(256, 72%, 46%, 1);
+    $c_g_circle-bottom: hsla(241, 72%, 46%, 0);  
+// Fonts
+h1{
+        @include fluid_text(23.4375rem, 46.875rem, 1.125rem, 1.5rem, $f-family, 700);
+    } 
+h2{
+        @include fluid_text(23.4375rem, 46.875rem, 1.5rem, 2rem, $f-family, 800);
+    } 
+h3{
+        @include fluid_text(23.4375rem, 46.875rem, 1rem, 1.125rem, $f-family, 700);
+    } 
+h4{
+        @include fluid_text(23.4375rem, 46.875rem, 3.5rem, 4.5rem, $f-family, 800);
+    } 
+p.info{
+        @include fluid_text(23.4375rem, 46.875rem, 1rem, 1.25rem, $f-family, 500);
+        @include fluid_l-height(23.4375rem, 46.875rem, 1.3125rem, 1.4375rem);
+    } 
+a.btn{
+        @include font_style($f-family, 800);
+        font-size: 1.125rem;
+    } 
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: clamp(350px, 100%, 1440px);
+    height: 100vh;
+
+    background: white;  
+}
+

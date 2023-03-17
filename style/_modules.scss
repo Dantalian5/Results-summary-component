@@ -1,0 +1,62 @@
+.m-tittle{
+    margin-bottom: 1.5rem;
+}
+.m-circle{
+    width: auto;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__number{
+        margin-top: .60em;
+    }
+    &__data{
+        margin-bottom: 2em;
+    }
+}
+.m-subtittle{
+    margin-bottom: .5rem;
+}
+.m-txt1{
+    width: 95%;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.m-title--2{
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+}
+.m-card{
+    width: 100%;
+    height: auto;
+    padding: 1.125rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 1rem;
+    &__title{
+        margin-left: .6875rem;
+    }
+    &__info{
+        margin-left: auto;
+        &--dimmed{
+            margin-left: .3125rem;
+        }
+    }
+}
+.m-btn{
+    width: 100%;
+    height: auto;
+    border-radius: 1.6875rem;
+    padding-block: 1.0625rem;
+    margin-top: 1.5rem;
+}
+
