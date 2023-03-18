@@ -3,8 +3,10 @@
 }
 .m-circle{
     width: auto;
-    aspect-ratio: 1 / 1;
+    min-width: 8.75rem;
     height: auto;
+    min-height: 8.75rem;
+    aspect-ratio: 1;
     margin-bottom: 1.5rem;
 
     display: flex;
@@ -13,12 +15,13 @@
     justify-content: center;
 
     &__number{
-        margin-top: .60em;
+        margin-inline: 0.8em;
     }
-    &__data{
+    /*&__data{
         margin-bottom: 2em;
-    }
+    }*/
 }
+
 .m-subtittle{
     margin-bottom: .5rem;
 }
